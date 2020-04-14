@@ -19,13 +19,13 @@ public class calculadora {
 		System.out.println("Ingrese el segundo numero");
 		b = Integer.parseInt(teclado.next());
 		if(opcion.equals(1)){
-			resultado = a + b;
+			resultado = a - b;
 			}else if(opcion.equals(2)){
-				resultado = a - b;
+				resultado = a * b;
 				}else if(opcion.equals(3)){
-					resultado = a * b;
+					resultado = a / b;
 					}else{
-						resultado = a / b;
+						resultado = a + b;
 						} 
  
             System.out.println("El resultado es " + resultado.toString());
