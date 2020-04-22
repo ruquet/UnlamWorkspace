@@ -2,43 +2,40 @@ package calculadora;
 
 import java.util.Scanner;
 
+
 public class calculadora {
-	 
-	public static void main(String[] args) {
-		Integer a;
-		Integer b;
-		Integer opcion;
-		Integer resultado;
-		Scanner teclado = new Scanner(System.in);
-		do{
-			System.out.println("Ingrese su operaciÃ³n /n 1 para restar /n 2 para multiplicar /n 3 para dividir /n 4 para sumar");
-			opcion = Integer.parseInt(teclado.next());
-		}
-            while (opcion < 1 && opcion > 4);
-            System.out.println("Ingrese el primer numero");       
-            a = teclado.nextInt();
+       
+        public static void main(String[] args)  {                    
+            Integer opcion;
+            Operacion op = new Operacion();
            
-            System.out.println("Ingrese el segundo numero");  
-            b = teclado.nextInt();
+            Scanner teclado = new Scanner(System.in);
+            do{
+                System.out.println("Ingrese su operación \n 1 para restar \n 2 para multiplicar \n 3 para dividir \n 4 para sumar");  
+            opcion = teclado.nextInt();   
+
+            teclado.close();
+            }
+            while (opcion < 1 && opcion > 4);
+            
+            op.LeerNumero();
            
             switch (opcion) {
          
             case 1:
-            	resultado = a - b; 
+            	op.restar();
+            	
             break;
             case 2:
-            	resultado = a * b;
+            	op.multiplicar();
            break;
            case 3:
-        	   resultado = a / b;   
+        	   op.dividir(); 
             break;
            case 4:
-        	   resultado = a + b;
+        	   op.sumar();
            break;
             }
- 
-            System.out.println("El resultado es " + resultado.toString());
             }
-	} 
-
+        }
 
