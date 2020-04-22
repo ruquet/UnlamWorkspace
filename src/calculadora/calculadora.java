@@ -2,20 +2,19 @@ package calculadora;
 
 import java.util.Scanner;
 
-import calculadora.Operacion;
+
 public class calculadora {
        
-        public static void main(String[] args)  {          
-            Integer a;    
-            Integer b;          
+        public static void main(String[] args)  {                    
             Integer opcion;
-            Integer resultado = 0;
             Operacion op = new Operacion();
            
             Scanner teclado = new Scanner(System.in);
             do{
                 System.out.println("Ingrese su operación \n 1 para restar \n 2 para multiplicar \n 3 para dividir \n 4 para sumar");  
-            opcion = teclado.nextInt();       
+            opcion = teclado.nextInt();   
+
+            teclado.close();
             }
             while (opcion < 1 && opcion > 4);
             
@@ -37,7 +36,6 @@ public class calculadora {
         	   op.sumar();
            break;
             }
-          
-                        }
+            }
         }
 
